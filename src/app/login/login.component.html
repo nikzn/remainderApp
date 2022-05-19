@@ -1,0 +1,61 @@
+<body>
+    
+<div class="container-fluid">
+
+<div class="row">
+    <div  class="col-xl-6 col-sm-12">
+        <h1 class="display-4">Event Manager</h1>
+        <img id="bg" class="img-fluid" src="/assets/img/login.png" alt="" width="100%" height="100%"  >
+    </div>
+ 
+ 
+    <div id="log" class="col-xl-6 col-sm-12 ">
+        
+    <div class="float-start login">
+
+        <h1 class="text-center">Login Form</h1>
+
+        <form [formGroup]="loginForm" (ngSubmit)="login()" >
+            
+            <!-- <i class="fas fa-user-circle"></i> -->
+                <input type="text" id="login_accno" formControlName="accno" class="form-control" placeholder="Account Number" />
+            
+                <div *ngIf="(this.loginForm.get('accno')?.touched||this.loginForm.get('accno')?.dirty)&&this.loginForm.get('accno')?.errors" >invalid accno</div>
+            
+            
+            <!-- <i class="fab fa-keycdn"></i>  -->
+             <input type="password" id="login_pswd" formControlName="pswd" class="form-control" placeholder="Password" />
+                
+             <div *ngIf="(this.loginForm.get('pswd')?.touched||this.loginForm.get('pswd')?.dirty)&&this.loginForm.get('pswd')?.errors">Invalid Password</div>
+
+            
+              <div class="row mb-4">
+                <div class="col d-flex justify-content-center">
+                
+                 
+                    <a href="#!">Forgot password?</a>
+                 
+             
+                </div>
+              </div>
+              
+              
+              <input type="submit" value="Login" class="btn btn-primary btn-block mb-4">
+            
+              
+              <div class="text-center">
+                <p>Not a member? <a routerLink="register">Register</a></p>
+               
+                
+              </div>
+
+
+
+        </form>
+
+    </div>
+</div>
+</div>
+    </div>
+
+</body>

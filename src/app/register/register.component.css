@@ -1,0 +1,54 @@
+#bg
+{
+  
+  border-right:2px solid black ;
+
+}
+#log
+{
+  background-color:#333;
+ 
+}
+
+.register
+{
+margin:32px;  
+padding: 12px;  
+width: 400px;
+height: 550px;
+border: 2px solid whitesmoke;
+border-radius: 12px;
+
+}
+form
+{
+	margin-top:52px ;
+
+}
+ input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+
+  input[type="submit"] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  } 
+.register h1,p
+{
+  color:whitesmoke
+}

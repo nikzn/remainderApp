@@ -1,0 +1,42 @@
+
+<div class="row">
+<div class="col-xl-6 col-sm-12">
+   <div class="row">
+      <div id="nav1" class="col-xl-6">
+    <!-- <a class="navbar-brand"> <h1><i class="fas fa-user"></i>{{user}}</h1></a> -->
+  </div>
+    <div id="nav2" class="col-xl-6">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/dashboard"><i class="fas fa-home"></i>Home</a>
+        </li>
+   
+      
+       
+      </ul>
+    </div>
+  </div>
+<img id="bg" class="img-fluid" src="/assets/img/event.png" alt="" width-="100%" height="100%">
+</div>
+<div id="log" class="col-xl-6 col-sm-12">
+<div class="event">
+
+   <h1>Enter Event </h1> 
+
+<form [formGroup]="eventForm" (ngSubmit)="addEvent()" >
+
+  <label for="date" >Event Date:</label> 
+ <input type="date" formControlName="date" placeholder="Event Date"><br>
+ 
+<label for="text">Event Name:</label>
+ <input type="text" formControlName="name" placeholder="Event Name"> <br>
+ <label for="text">Event Description:</label>
+ <input type="text" formControlName="description" placeholder="Event Description"><br>
+
+ <input type="submit" value="Submit">
+
+
+</form>
+</div>
+</div>
+</div>

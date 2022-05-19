@@ -1,0 +1,85 @@
+<body>
+<div class="container-fluid">
+  <div class="row"> 
+    <div class="col-xl-12 col-md-12">
+       <div class="row">
+      <div id="nav1" class="col-xl-6">
+    <a class="navbar-brand"> <h1><i class="fas fa-user"></i>{{user}}</h1></a>
+  </div>
+    <div id="nav2" class="col-xl-6">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/dashboard"><i class="fas fa-home"></i>Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/events"><i class="fas fa-plus-circle"></i>Add Event</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/eventall" ><i class="fas fa-calendar-alt"></i>View Events</a>
+        </li>
+        <li class="nav-item">
+          <button (click)="logout()" class="btn btn-outline-danger float-end">Logout</button>
+        </li>
+       
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  <!-- <button (click)="deletefromParent()" class="btn btn-danger ">delete</button>
+  <hr>
+  <app-deleteevent (onDelete)="onDelete($event)" (onCancel)="onCancel()" [item]=accno></app-deleteevent> -->
+
+  <div class="col-xl-12 col-md-12">       
+<div class="remainder">
+<h5 class="text-center">Today's Event</h5>
+<table class="table table-success table-hover">
+    <thead>
+      <tr>
+        <th scope="col">No</th>
+        <th scope="col">Event Date</th>
+        <th scope="col">Event Name</th>
+        <th scope="col">Event Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let e of event let i = index ">
+    
+        <td>{{i+1}}</td>
+        <td>{{e.date}}</td>
+        <td>{{e.name}}</td>
+        <td>{{e.description}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h5 class="text-center">Tommorow's Event</h5>
+  <table class="table table-success table-hover">
+    <thead>
+      <tr>
+        <th scope="col">No</th>
+        <th scope="col">Event Date</th>
+        <th scope="col">Event Name</th>
+        <th scope="col">Event Description</th>
+      </tr>
+    </thead>
+    <tbody>
+       <tr *ngFor="let f of event1 let j = index ">
+        <td>{{j+1}}</td>
+        <td>{{f.date}}</td>
+        <td>{{f.name}}</td>
+        <td>{{f.description}}</td>
+      </tr> 
+      
+    </tbody>
+  </table>
+</div>
+</div>
+</div>
+</div>
+
+</body>

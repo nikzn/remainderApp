@@ -1,0 +1,64 @@
+<body>
+    
+    <div class="container-fluid">
+
+        <div class="row">
+<div class="col-xl-6 col-sm-12">
+    <h1>Event Manager</h1>
+ 
+    <img id="bg" class="img-fluid" src="/assets/img/registration.png" alt="" height="100%" width="100%">
+</div>
+
+<div id="log" class="col-xl-6 col-sm-12">
+        <div class="float-start register">
+    
+            <h1 class="text-center">Register Form</h1>
+    
+            <form [formGroup]="registerForm" (ngSubmit)="register()" >
+                
+                <input type="text" id="login_accname" formControlName="accname" class="form-control" placeholder="Account Name" />
+                
+                    <div *ngIf="(this.registerForm.get('accname')?.touched||this.registerForm.get('accn')?.dirty)&&this.registerForm.get('accname')?.errors" >invalid accname</div>
+                
+                <!-- <i class="fas fa-user-circle"></i> -->
+                    <input type="text" id="login_accno" formControlName="accno" class="form-control" placeholder="Account Number" />
+                
+                    <div *ngIf="(this.registerForm.get('accno')?.touched||this.registerForm.get('accno')?.dirty)&&this.registerForm.get('accno')?.errors" >invalid accno</div>
+                
+                
+                <!-- <i class="fab fa-keycdn"></i>  -->
+                 <input type="password" id="login_pswd" formControlName="pswd" class="form-control" placeholder="Password" />
+                    
+                 <div *ngIf="(this.registerForm.get('pswd')?.touched||this.registerForm.get('pswd')?.dirty)&&this.registerForm.get('pswd')?.errors">Invalid Password</div>
+    
+                
+                  <div class="row mb-4">
+                    <div class="col d-flex justify-content-center">
+                    
+                     
+                        <a href="#!">Forgot password?</a>
+                     
+                 
+                    </div>
+                  </div>
+                  
+                  
+                  <input type="submit" value="Register" class="btn btn-primary btn-block mb-4">
+                
+                  
+                  <div class="text-center">
+                    <p>Not a member? <a routerLink="">Log In</a></p>
+                   
+                    
+                  </div>
+    
+    
+    
+            </form>
+    
+    
+        </div>
+        </div>
+    </div>
+    </div>
+    </body>

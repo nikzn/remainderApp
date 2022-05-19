@@ -1,0 +1,35 @@
+<body>
+  
+
+<h1 class="text-center">All Events</h1>
+
+
+
+<table class="table table-dark table-hover">
+    <thead>
+      <tr>    
+            <th scope="col">SNo</th>
+        <th scope="col">Date</th>
+        <th scope="col">Event Name</th>
+        <th scope="col">Event Description</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+        
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let e of event let i = index " >
+        <td>{{i+1}}</td>
+        <td>{{e.date}}</td>
+        <td>{{e.name}}</td>
+        <td>{{e.description}}</td>
+        <td> <button class="btn btn-outline-info">edit</button> </td>
+        <td><button class="btn btn-outline-danger" (click) ="deleteEvent(e._id)" >delete</button> </td>
+        
+        
+      </tr>
+      
+    </tbody>
+  </table>
+</body>
