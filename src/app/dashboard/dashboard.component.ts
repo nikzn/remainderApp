@@ -17,6 +17,8 @@ event1:any
 tommorow:any
 accno1:any
   constructor(private router:Router ,private ds:ServicesService) {
+    
+
 
     this.user=JSON.parse(localStorage.getItem("User")||'')
     this.accno=JSON.parse(localStorage.getItem("currentAccno")||'')
@@ -29,6 +31,7 @@ accno1:any
       if(result){
       this.event=result.event
       
+      
       }
     },
     (result)=>
@@ -36,6 +39,7 @@ accno1:any
       alert(result.error.message)
     }
     )
+
     console.log(this.event);
     var nextDay = new Date();
     nextDay.setDate(nextDay.getDate() + 1)

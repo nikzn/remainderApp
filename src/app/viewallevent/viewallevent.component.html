@@ -4,7 +4,6 @@
 <h1 class="text-center">All Events</h1>
 
 
-
 <table class="table table-dark table-hover">
     <thead>
       <tr>    
@@ -20,6 +19,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let e of event let i = index " >
+       
         <td>{{i+1}}</td>
         <td>{{e.date}}</td>
         <td>{{e.name}}</td>
