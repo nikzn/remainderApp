@@ -21,7 +21,7 @@
       <tr *ngFor="let e of event let i = index " >
        
         <td>{{i+1}}</td>
-        <td>{{e.date}}</td>
+        <td>{{e.date|date:'dd-mm-yyyy'}}</td>
         <td>{{e.name}}</td>
         <td>{{e.description}}</td>
         <td> <button class="btn btn-outline-info">edit</button> </td>
